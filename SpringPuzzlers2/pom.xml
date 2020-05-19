@@ -10,7 +10,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>SpringPuzzlers</artifactId>
+    <groupId>by.babanin.sprintRipper</groupId>
+    <artifactId>SpringPuzzlers2</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -21,14 +22,9 @@
             <version>${spring-framwork.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-            <version>${spring-framwork.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>2.1.9.RELEASE</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
         </dependency>
     </dependencies>
 
@@ -44,4 +40,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
