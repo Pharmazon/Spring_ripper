@@ -19,12 +19,10 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${spring-framwork.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
         </dependency>
     </dependencies>
 
@@ -40,5 +38,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
