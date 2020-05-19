@@ -1,9 +1,9 @@
 package by.babanin;
 
-/*
-ProfilingControllerMBean - интерфейс, который позволит
-менять параметры класса ProfilingController на лету (в любое время)
-с помощью JMX console.
+/**
+    ProfilingControllerMBean - интерфейс, который позволит
+    менять параметры класса ProfilingController на лету (в любое время)
+    с помощью JMX console.
  */
 public class ProfilingController implements ProfilingControllerMBean {
     private boolean enabled = true;

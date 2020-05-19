@@ -8,16 +8,20 @@ import org.springframework.util.ReflectionUtils;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.Random;
-/*
-Зачем нужно 2 метода в BeanPostProcessor?
 
-Когда обьъекту нужно добавить логику на лету, то используеться механизм Dynamic Proxy.
-Но после тогда как мы создадим прокси объекта, все метаданные сотруться.
+/**
+    Зачем нужно 2 метода в BeanPostProcessor?
 
-По этой причине в методе postProcessBeforeInitialization мы работыем с оригинальными объектами.
-А в postProcessAfterInitialization мы можем работать уже с прокси-объектами.
+    Когда обьъекту нужно добавить логику на лету, то используеться механизм Dynamic Proxy.
+    Но после тогда как мы создадим прокси объекта, все метаданные сотруться.
+
+    По этой причине в методе postProcessBeforeInitialization мы работыем с оригинальными объектами.
+    А в postProcessAfterInitialization мы можем работать уже с прокси-объектами.
  */
+
 public class InjectRandomInitAnnotationBeanPostProcessor implements BeanPostProcessor {
+
+//    Работаем с оригинальными объектами
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Field[] fields = bean.getClass().getDeclaredFields();
@@ -38,6 +42,7 @@ public class InjectRandomInitAnnotationBeanPostProcessor implements BeanPostProc
         return bean;
     }
 
+//    Работаем с прокси объектами
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         return bean;
